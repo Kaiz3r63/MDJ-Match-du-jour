@@ -3,7 +3,9 @@ window.APP_CONFIG = {
     pageTitle: "MDJ - Match du Jour",
     teamName: "VOTRE NOM D'ÉQUIPE", // Ex: "XV DU BROC"
     teamColor: "#d97706",        // Couleur principale de l'équipe (Hex)
-
+    // Configuration du Logo de l'équipe
+    // Taille recommandée : Hauteur d'environ 40-50px (format PNG avec fond transparent conseillé)
+    logoFilename: "logo_club.jpeg",
     firebaseConfig: {
         apiKey: "VOTRE_API_KEY",
         authDomain: "votre-projet.firebaseapp.com",
