@@ -90,7 +90,7 @@
                 <!-- GAUCHE : LOGO OFFICIEL -->
                 <div class="col-span-2 flex items-center gap-1.5 justify-start">
                     <div class="logo-broc-container shrink-0 h-8 sm:h-9">
-                        <img src="logoXVBroc-6abe4572ccac25.57314397-6abe4576b88f90.33206283_2.png" alt="Logo Équipe" class="h-full w-auto object-contain">
+                        <img id="headerLogoImg" src="" alt="Logo Équipe" class="h-full w-auto object-contain">
                     </div>
                 </div>
 
@@ -320,7 +320,7 @@
 
     <footer id="footerAppInfo" class="text-center text-[11px] text-slate-500 py-3 border-t border-slate-800/60 no-print"></footer>
 
-    <!-- OVERLAYS ET MODALES (Idem ton code original avec intégration config) -->
+    <!-- OVERLAYS ET MODALES -->
     <!-- ÉCRAN DE VERROUILLAGE -->
     <div id="lockOverlay" class="fixed inset-0 bg-slate-950/95 z-50 hidden flex flex-col items-center justify-center p-6 no-print">
         <div class="text-center mb-8">
@@ -400,9 +400,6 @@
         </div>
     </div>
 
-    <!-- AUTRES MODALES (Règles, About, XLS, Scratchpad, Settings, Try, Sub, Number) inchangées -->
-    <!-- (Elles utilisent déjà les variables dynamiques du code JS) -->
-
     <!-- SCRIPT INITIALISATION & CONFIG -->
     <script>
         // Récupération des paramètres depuis config.js
@@ -411,6 +408,7 @@
             pageTitle: "MDJ - Match du Jour",
             teamName: "XV DU BROC",
             teamColor: "#d97706",
+            logoFilename: "logo.png",
             firebaseConfig: {}
         };
 
@@ -420,6 +418,12 @@
         document.getElementById('labelHomeActions').innerText = CONFIG.teamName;
         document.getElementById('thHomeTableTitle').innerText = CONFIG.teamName;
         document.getElementById('footerAppInfo').innerText = `${CONFIG.appName} - Application libre de gestion de match développée par Grégory CAZORLA en collaboration avec l'IA.`;
+
+        // Injection dynamique du logo défini dans le fichier config.js
+        const logoImgElement = document.getElementById('headerLogoImg');
+        if (logoImgElement && CONFIG.logoFilename) {
+            logoImgElement.src = CONFIG.logoFilename;
+        }
 
         // Initialisation Firebase avec la config externe
         firebase.initializeApp(CONFIG.firebaseConfig);
@@ -458,9 +462,6 @@
             setupLockSlider();
             setupCloseMatchSlider();
         });
-
-        // -> Reste de ton code JavaScript original inchangé...
-        // (Toutes les fonctions comme listenToMatchUpdates, saveMatchData, renderUI, etc. s'appuient désormais sur CONFIG.teamName)
     </script>
 </body>
 </html>
