@@ -1,8 +1,13 @@
 # MDJ - Match du Jour 🏉
 
-**MDJ (Match du Jour)** est une application web légère, autonome et pensée pour le terrain, conçue pour gérer en direct et en temps réel les feuilles de match de rugby (score, chronomètre, essais, transformations, pénalités, cartons et changements de joueurs). 
+**MDJ (Match du Jour)** est une application web légère, autonome et pensée pour le terrain, conçue pour gérer en direct et en temps réel les feuilles de match de rugby (score, chronomètre, essais, transformations, pénalités, cartons et changements de joueurs) optimise pour tablette. 
 
-Développée pour répondre aux exigences des règlements de la FFR (notamment pour les compétitions U16/U19 et championnats régionaux), elle permet un suivi multi-utilisateurs instantané grâce à une synchronisation Cloud (Firebase Firestore).
+Pensée comme une alternative libre et personnalisable au précieux outil **JDM (Jour de Match) de la FFR**, elle répond aux exigences des règlements fédéraux (notamment pour les compétitions U16/U19 et championnats régionaux) tout en offrant un suivi multi-utilisateurs instantané grâce à une synchronisation Cloud (Firebase Firestore).
+
+---
+
+## 🤖 Conception & Développement
+Cette application a été entièrement codée et pensée par **Kaiz3r63** en étroite collaboration avec une intelligence artificielle (Gemini).
 
 ---
 
